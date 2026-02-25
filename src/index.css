@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #d4a373;
+  --color-primary-dark: #b58b61;
+  --color-secondary: #2c3e50;
+  --color-accent: #e76f51;
+  --color-background: #ffffff;
+  --color-surface: #f8f9fa;
+  --color-text-main: #333333;
+  --color-text-light: #666666;
+
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+}
+
+/* Custom Calendar Styles */
+.react-datepicker {
+  border: none !important;
+  font-family: 'Inter', sans-serif !important;
+}
+
+.react-datepicker__header {
+  background-color: white !important;
+  border-bottom: 1px solid #f3f4f6 !important;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected {
+  background-color: #d4a373 !important;
+  border-radius: 50% !important;
+  font-weight: bold;
+}
+
+.react-datepicker__day {
+  margin: 0.2rem !important;
+  width: 2.5rem !important;
+  line-height: 2.5rem !important;
+  border-radius: 50% !important;
+}
+
+.react-datepicker__day:hover {
+  background-color: #f3f4f6 !important;
+}
+
+.react-datepicker__day-name {
+  color: #9ca3af !important;
+  width: 2.5rem !important;
+  margin: 0.2rem !important;
+}
+
+.react-datepicker__current-month {
+  font-family: 'Playfair Display', serif !important;
+  font-size: 1.25rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.react-datepicker__navigation {
+  top: 8px !important;
+}
+
+:root {
+  --primary: #d4a373;
+  --primary-dark: #b58b61;
+  --primary-gradient: linear-gradient(135deg, #f3dca2 0%, #d4a373 50%, #b58b61 100%);
+  --secondary: #2c3e50;
+  --secondary-gradient: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+  --text-main: #333333;
+  --text-light: #666666;
+  --background: #ffffff;
+  --surface: #ffffff;
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--background);
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+  perspective: 1000px;
+  /* Enable 3D space */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Playfair Display', serif;
+  color: var(--secondary);
+  line-height: 1.2;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 35px;
+  background: var(--primary-gradient);
+  color: white;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 5px 15px rgba(212, 163, 115, 0.4);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transform-style: preserve-3d;
+}
+
+.btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(212, 163, 115, 0.5);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(212, 163, 115, 0.4);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  box-shadow: none;
+}
+
+.btn-outline:hover {
+  background: var(--primary-gradient);
+  color: white;
+  box-shadow: 0 10px 20px rgba(212, 163, 115, 0.3);
+  border-color: transparent;
+}
